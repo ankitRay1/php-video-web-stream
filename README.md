@@ -5,7 +5,7 @@
 
 ## php-video-web-stream is a web application developed on PHP, MySQL, jQuery using OpenTok API. Today they provide API access to build face-to-face video chat room. In addition, you will be able to send text messages during video conference. This is useful function if you want to share links, mails with your communication partner.
 
-IMPORTANT NOTES! WebRTC won’t work without HTTPS. According internal security policy Browsers does not support getUserMedia() for unsecure pages . So you will not be able to use microphone and webcam if your page is not HTTPS
+### IMPORTANT NOTES! WebRTC won’t work without HTTPS. According internal security policy Browsers does not support getUserMedia() for unsecure pages . So you will not be able to use microphone and webcam if your page is not HTTPS
 
 ## Features
 1.Face-to-face video room
@@ -14,4 +14,4 @@ IMPORTANT NOTES! WebRTC won’t work without HTTPS. According internal security 
 4.Responsive layout
 5.Android mobile friendly
 
-## hanks 
+## Thanks 
