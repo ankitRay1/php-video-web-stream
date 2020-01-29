@@ -1,0 +1,5 @@
+{
+    "require": {
+        "opentok/opentok": "2.2.x"
+    }
+}

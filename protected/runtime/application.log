@@ -1,0 +1,39 @@
+2020/01/29 18:05:01 [error] [exception.CException] CException: CAssetManager.basePath "/var/www/shopmecart.in/html/assets" is invalid. Please make sure the directory exists and is writable by the Web server process. in /var/www/shopmecart.in/html/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /var/www/shopmecart.in/html/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/var/www/shopme...')
+#1 /var/www/shopmecart.in/html/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /var/www/shopmecart.in/html/framework/web/CClientScript.php(510): CAssetManager->publish('/var/www/shopme...')
+#3 /var/www/shopmecart.in/html/framework/web/CClientScript.php(547): CClientScript->getCoreScriptUrl()
+#4 /var/www/shopmecart.in/html/framework/web/CClientScript.php(348): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/shopmecart.in/html/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /var/www/shopmecart.in/html/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html>...')
+#7 /var/www/shopmecart.in/html/framework/web/CController.php(788): CController->processOutput('<!DOCTYPE html>...')
+#8 /var/www/shopmecart.in/html/protected/controllers/VideochatController.php(62): CController->render('login', Array)
+#9 /var/www/shopmecart.in/html/framework/web/actions/CInlineAction.php(49): VideochatController->actionLogin()
+#10 /var/www/shopmecart.in/html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/shopmecart.in/html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /var/www/shopmecart.in/html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/shopmecart.in/html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /var/www/shopmecart.in/html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/shopmecart.in/html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/shopmecart.in/html/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/shopmecart.in/html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/shopmecart.in/html/framework/web/CWebApplication.php(282): CController->run('login')
+#19 /var/www/shopmecart.in/html/framework/web/CWebApplication.php(141): CWebApplication->runController('videochat/login')
+#20 /var/www/shopmecart.in/html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/shopmecart.in/html/index.php(15): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=videochat/login
+---
+2020/01/29 18:08:27 [error] [php] unserialize(): Unexpected end of serialized data (/var/www/shopmecart.in/html/framework/caching/CCache.php:108)
+Stack trace:
+#0 /var/www/shopmecart.in/html/framework/db/ar/CActiveRecord.php(2361): CMysqlSchema->getTable()
+#1 /var/www/shopmecart.in/html/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct()
+#2 /var/www/shopmecart.in/html/framework/db/ar/CActiveRecord.php(658): SessionModel->getMetaData()
+#3 /var/www/shopmecart.in/html/framework/db/ar/CActiveRecord.php(1485): SessionModel->getTableSchema()
+#4 /var/www/shopmecart.in/html/protected/components/Controller.php(9): SessionModel->findByPk()
+#5 /var/www/shopmecart.in/html/framework/web/CWebApplication.php(281): VideochatController->init()
+#6 /var/www/shopmecart.in/html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/shopmecart.in/html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/shopmecart.in/html/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=videochat/index
